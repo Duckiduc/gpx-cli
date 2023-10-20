@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx tsc && node ./src/copy-python-files.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.7",
+    "fs-extra": "^11.1.1",
     "typescript": "^5.2.2"
   }
 }
