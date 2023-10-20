@@ -1,3 +1,4 @@
+import argparse
 import os
 import gpxpy
 
@@ -26,5 +27,13 @@ def process_folder(folder_path):
                 print(f"Reordered track points in {filename}")
 
 
-target_folder = "../folder/videos_folder"
-process_folder(target_folder)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="GPX points reordering script")
+    parser.add_argument(
+        "folder", help="Path to the folder containing GPX files to process"
+    )
+
+    args = parser.parse_args()
+    target_folder = args.folder
+
+    process_folder(target_folder)
